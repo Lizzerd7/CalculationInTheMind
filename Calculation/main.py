@@ -58,7 +58,6 @@ def step(call):
                 bot.send_message(message.chat.id, 'Ответ неверный 😢', reply_markup=markup4)
 
         bot.register_next_step_handler(call.message, message_input)
-
     if call.data == 'next_hard1' or call.data == 'next_hard2':
         y = random.randint(1, 500)
         s = ('+')
@@ -89,7 +88,7 @@ def start(message):
     bot.send_message(message.chat.id, f'Ваш user ID: `{message.chat.id}`', parse_mode='Markdown')#бот отправляет сообщение "...", делает все буквы маленькими
 
     first_name = message.from_user.first_name
-    message_text = f'Привет *{first_name}*! Этот бот помогает тренировать устный счет в уме, просто выбери нужный уровень сложности 👇\n\n' \
+    message_text = f'Привет *{first_name}*! Этот бот помогает тренировать устный счет в уме, просто выбери нужный уровень сложности 👇\n' \
                    f'Чтобы найти автора, воспользуйтесь [ссылкой](https://t.me/lizzerd18).'
 
 
